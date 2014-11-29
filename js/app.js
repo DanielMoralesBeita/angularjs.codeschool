@@ -3,4 +3,17 @@
  * @copyright (C)Copyright 2014 e.abdurayimov@gmail.com
  */
 
-var app = angular.module('gemStore', []);
+(function () {
+    var app = angular.module('store', []);
+
+    app.controller('StoreController', function () {
+        this.product = gem;
+    });
+
+    var gem = {
+        name       : "Dodecahedron",
+        price      : 2.95,
+        description: '. . .'
+    };
+})();
+
