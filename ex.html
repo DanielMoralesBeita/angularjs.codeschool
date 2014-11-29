@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+</head>
+<body class="container" ng-controller="StoreController as store">
+<div ng-repeat="product in store.products" class="product row">
+    <h3>
+        {{product.name}}
+        <em class="pull-right">${{product.price}}</em>
+    </h3>
+</div>
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/ex/1.4.js"></script>
+</body>
+</html>
