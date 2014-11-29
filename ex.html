@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 </head>
 <body ng-controller="StoreController as store">
+
 <!--  Products Container  -->
 <div class="list-group">
     <!--  Product Container  -->
@@ -14,12 +15,17 @@
         </h3>
 
         <!-- Image Gallery  -->
-        <div class="gallery" ng-show="product.images.length>0">
-            <img class="img img-circle img-thumbnail center-block" ng-src="{{product.images[0]}}"/>
-            <ul class="clearfix">
-                <li class="small-image pull-left thumbnail" ng-repeat="image in product.images"><img
-                        ng-src="{{image}}"/></li>
-            </ul>
+        <div ng-show="product.images.length">
+            <!-- Fail 1 Message -->
+            <div ng-show="product.images">
+                <img class="img img-circle img-thumbnail center-block" ng-src="{{product.images[0]}}"/>
+                <ul class="clearfix">
+                    <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+                        <img ng-src="{{image}}"/>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </div>
