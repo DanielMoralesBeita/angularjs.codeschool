@@ -3,4 +3,4 @@
  * @copyright (C)Copyright 2014 e.abdurayimov@gmail.com
  */
 
-var app = angular.module('store', [])
+var app = angular.module('gemStore', []);
