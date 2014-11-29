@@ -4,10 +4,10 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 </head>
 <body class="container" ng-controller="StoreController as store">
-<div ng-repeat="product in store.products" class="product row">
+<div class="product row" ng-repeat="product in store.products">
     <h3>
         {{product.name}}
-        <em class="pull-right">${{product.price}}</em>
+        <em class="pull-right">{{product.price|currency}}</em>
     </h3>
 </div>
 
